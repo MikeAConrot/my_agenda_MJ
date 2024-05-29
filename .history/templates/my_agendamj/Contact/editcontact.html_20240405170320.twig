@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+ 
+{% block title_name %}
+    
+{% endblock %}
+{% block header %}
+    <h1>Edit Contact</h1>
+{% endblock %}
+ 
+{% block content  %}
+  
+<div class="panel panel-info col-md-6 col-md-offset-3 m-2">
+          <h1 class="text-center">Todos los Contactos </h1>
+          <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre Completo</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contac in contact %}
+                    <tr>
+                        <td>{{ contac.name }} {{ contac.lastName }}</td>
+                        <td>{{ contac.mail }}</td>
+                        <td>
+                            <a href="{{ path('edit_contacts', {'idContact':contac.id }) }}">Editar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+      </div>
+
+    
+{% endblock %}

@@ -1,0 +1,28 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title_name %}
+    AGENDA HARMAN
+{% endblock %}
+
+
+{% block navbar %}
+
+
+<a name="" id="b" class="btn btn-primary" href="{{path('contact_new')}}" role="button">NEW CONTACT</a>
+<a name="" id="b" class="btn btn-primary" href="{{path('show_contacts')}}" role="button">SHOW CONTACTS</a>
+<a name="" id="b" class="btn btn-primary" href="{{path('show_phones')}}" role="button">SHOW PHONES</a>
+
+{% endblock %}
+
+ 
+{% block header %}
+    WELCOME, IT 'S YOUR AGENDA.
+    {{'title'|trans})}}
+{% endblock %}
+ 
+ {% block content  %}
+    <div>
+        <H2>HERE U' CAN FIND SOME OPTIONS...</H2>
+    </div>
+{% endblock %}

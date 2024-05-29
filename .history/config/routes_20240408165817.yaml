@@ -1,0 +1,26 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+index:
+    path: /
+    defaults: {_controller: App\Controller\Agenda\MyAgendaController::index}
+
+agenda:
+    resource: 'routes/Agenda/routing.yml'
+    prefix: /Agenda
+
+app_register:
+    path: /register
+    defaults: {_controller: App\Controller\RegistrationController::register}
+
+app_loggin:
+    path: /login
+    defaults: {_controller: App\Controller\Security\SecurityController::login}
+
+
+app_logout:
+    path: /logout
+    defaults: {_controller: App\Controller\Security\SecurityController::logout}

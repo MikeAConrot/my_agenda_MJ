@@ -1,0 +1,12 @@
+agenda_contact:
+    resource: 'routing/contact.yml'
+    prefix: /contact
+
+agenda_phones:
+    resource: 'routing/phones.yml'
+    prefix: /phones
+
+show_contacts:
+    resource: 'routing/contact.yml'
+    prefix: /show_contacts
+

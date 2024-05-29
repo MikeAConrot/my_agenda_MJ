@@ -1,0 +1,25 @@
+
+{% extends 'base.html.twig' %}
+ 
+{% block title_name %}
+    CONTACTOS
+{% endblock %}
+{% block header %}
+    <h1>New Contact</h1>
+{% endblock %}
+ 
+{% block content  %}
+    {{ form(
+public function new(Request $request)
+    {   
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact, array(
+            'action' => $this->generateUrl('contact_new'),
+            'method' => 'POST'
+        ));
+ 
+        return $this->render('Agenda\Contact\index.html.twig',[
+            'form' => $form->createView(),
+        ]);
+}) }}
+{% endblock %}

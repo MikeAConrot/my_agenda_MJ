@@ -1,0 +1,24 @@
+body{
+    background-color: black;
+}
+
+
+.header{
+    color: aqua;
+    text-align: center;
+    width: 70%;
+    height: 70px;    
+    float: unset;
+    font-size: 90px;
+}
+
+
+div{
+    color: aqua;
+    text-align: center;
+    float: none;
+}
+
+nav{
+    background-color: aqua;
+}

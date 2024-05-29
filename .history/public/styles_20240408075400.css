@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+.header{
+    color: aqua;
+    margin: 3%;
+    padding: 5%;
+    font-family: 'Abril Fatface';
+    font-size: 500%;
+    transition: 0.8S;
+
+}
+
+.header:hover{
+    color: blueviolet;
+    transition: 0.8S;
+    text-decoration:dotted;
+}
+
+
+div{
+    color: aqua;
+    text-align: center;
+    
+}
+
+nav{
+    background-color: aqua;
+}
+.input{
+    color: blueviolet;
+    text-align: center;
+
+}
+
+
+.prueba{
+    background-color: rgb(153, 48, 48);
+    text-align: center;
+}
+
+tbody{
+    background-color: aqua;
+}
+

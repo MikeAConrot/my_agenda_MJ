@@ -1,0 +1,87 @@
+
+.header{
+    color: rgb(0, 0, 0);
+    margin: 3%;
+    padding: 5%;
+    font-family: 'Abril Fatface';
+    font-size: 500%;
+    transition: 0.8S;
+    text-align: center;
+
+}
+.header:hover{
+    color: rgb(211, 89, 89);
+    transition: 0.8S;
+    text-decoration:dotted;
+}
+
+
+div{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Bitter';
+   
+}
+
+nav{
+    background-color: rgb(98, 143, 143);
+    display: inline-block;
+    align-content: space-between;
+    margin: 3%;
+    padding: 2%;
+    text-align: center;
+    border-radius: 50px;
+}
+.input{
+    color: rgb(0, 0, 0);
+    text-align: center;
+
+}
+.container{
+    color:rgb(0, 0, 0);
+    font-family: 'Bitter';
+    border-color: rgb(255, 123, 123);
+    text-align: center;
+    border-style: solid;
+    font-size: 20px;
+    font: bold;
+}
+
+
+#b{
+  background-color: rgb(180, 219, 206);  
+  color: black;
+  margin-left: 6%;
+  border-color: black;
+  transition: 0.8s;
+  font-family: 'Abril Fatface';
+  font-size: 25px;
+  text-decoration: none;
+}
+
+#b:hover{
+    background-color: rgb(252, 133, 133);
+    transition: 0.8s;
+    
+}
+
+#indicestabla{
+    text-align: center;
+}
+#bdelete{
+    background-color: crimson;
+    border-color: crimson;
+}
+#bupdate{
+    background-color: rgb(90, 161, 152);
+    border-color: rgb(255, 255, 255);
+}
+
+.add_item_link{
+    background-color: rgb(173, 147, 147);
+    
+}
+#image{
+    width: 1px;
+    height: 1px;
+}

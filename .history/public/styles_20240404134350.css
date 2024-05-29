@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+    text-align: center;
+}
+
+
+.header{
+    color: aqua;
+    margin: 3%;
+    padding: 5%;
+    font-family: 'Galada';
+    font-size: 500%;
+
+}
+
+.header:hover[]
+
+
+div{
+    color: aqua;
+    text-align: center;
+    
+}
+
+nav{
+    background-color: aqua;
+}

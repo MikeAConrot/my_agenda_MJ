@@ -1,0 +1,3 @@
+agenda_contact:
+    resource:'routing/contact.yml'
+    pre

@@ -1,0 +1,15 @@
+phones_new:
+    path: /phones
+    defaults: {_controller: App\Controller\Agenda\PhoneController::phones}
+
+show_phones:
+    path: /show_phones
+    defaults: {_controller: App\Controller\Agenda\PhoneController::show_phones}
+
+edit_phones:
+    path: /edit_phones/{idContact}
+    defaults: {_controller: App\Controller\Agenda\PhoneController::edit_phones, idContact: " "}
+
+delete_phones:
+    path: /delete_phones/{idContact}
+    defaults: {_controller: App\Controller\Agenda\PhoneController::delete_phones, idContact: " "}

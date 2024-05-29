@@ -1,0 +1,43 @@
+{% block title_name %}
+    CONTACTOS
+{% endblock %}
+{% block header %}
+    <h1>PHONES</h1>
+{% endblock %}
+ 
+{% block content  %}
+    <div class="formulario">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre Completo</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contac in contacts    %}
+                <tr>
+                    <td>{{ contac.name }} {{ contac.lastName }}</td>
+                    <td>{{ contac.mail }}</td>
+                    <td>
+                        <a name="" id="" class="b
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        tn btn-primary" href="{{path('edit_contacts',{'idContact':contac.id })}}" role="button">Edit Contact</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

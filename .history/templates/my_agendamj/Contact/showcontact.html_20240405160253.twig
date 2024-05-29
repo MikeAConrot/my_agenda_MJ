@@ -1,0 +1,28 @@
+{% block title_name %}
+    CONTACTOS
+{% endblock %}
+{% block header %}
+    <h1>PHONES</h1>
+{% endblock %}
+ 
+{% block content  %}
+    <div class="formulario">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Nombre Completo</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contac in contacts %}
+                <tr>
+                    <td>{{ contac.name }} {{ contac.lastName }}</td>
+                    <td>{{ contac.mail }}</td> <td>{{  }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endblock %}

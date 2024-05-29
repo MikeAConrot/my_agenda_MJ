@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+ 
+{% block navbar %}
+
+
+<a name="" id="b" class="btn btn-primary" href="{{path('index')}}" role="button">HOME</a>
+<a name="" id="b" class="btn btn-primary" href="{{path('show_contacts')}}" role="button">SHOW EXISTING CONTACTS</a>
+
+{% endblock %}
+
+
+{% block title_name %}
+    
+{% endblock %}
+{% block header %}
+   <h1 style="text-align:center">EDIT CONTACT</h1>
+{% endblock %}
+ 
+{% block content  %}
+<div class="container">
+
+
+    {{form_start(form)  }}
+
+    <ul class="phones"
+     data-index="{{ form.phones|length > 0 ? form.phones|last.vars.name + 2 : 1 }}"
+     data-prototype="{{ form_widget(form.phones.vars.prototype)|e('html_attr') }}">
+    {% for phone in form.phones %}
+    <li>{{ form_row(phone) }}</li>
+     {% endfor %}
+    </ul>
+   
+    {{ form_end(form)}}
+</div>
+
+
+<script>
+  document
+       .querySelectorAll('ul.phones li')
+       .forEach(btn => {
+           btn.addEventListener("click", addFormToCollection)
+  });
+ 
+function addFormToCollection(e) {
+        const collectionHolder = document.querySelector('.' + e.currentTarget.dataset.collectionHolderClass);
+ 
+        const item = document.createElement('li');
+ 
+        item.innerHTML = collectionHolder
+            .dataset
+            .prototype
+            .replace(
+            /__name__/g,
+            collectionHolder.dataset.index
+            );
+ 
+        collectionHolder.appendChild(item);
+ 
+        collectionHolder.dataset.index++;
+        addTagFormDeleteLink(item);
+    };
+
+    function addTagFormDeleteLink(item) {
+        const removeFormButton = document.createElement('button');
+        removeFormButton.innerText = 'DELETE THIS FIELD';
+ 
+        item.append(removeFormButton);
+ 
+        removeFormButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            // remove the li for the tag form
+            item.remove();
+        });
+    }
+
+
+.querySelectorAll('ul.phones li')
+            .forEach((tag) => {
+                addTagFormDeleteLink(tag)
+        })
+</script>
+    
+{% endblock %}

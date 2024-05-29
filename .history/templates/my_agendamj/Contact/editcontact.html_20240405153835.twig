@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+ 
+{% block title_name %}
+    HERE U CAN EDIT CONTACTS
+{% endblock %}
+{% block header %}
+    <h1>Edit Contact</h1>
+{% endblock %}
+ 
+{% block content  %}
+    <div class="formulario">
+    {{ form(form) }}
+    </div>
+    {{hola}}
+
+
+
+    <a name="" id="" class="btn btn-primary" href="{{path('show_contacts')}}" role="button">SHOW CONTACTS</a>
+{% endblock %}

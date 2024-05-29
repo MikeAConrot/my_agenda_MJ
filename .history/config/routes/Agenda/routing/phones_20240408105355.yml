@@ -1,0 +1,7 @@
+phones_new:
+    path: /phones
+    defaults: {_controller: App\Controller\Agenda\PhoneController::phones}
+
+show_phones:
+    path: /show_phones
+    defaults: {_controller: App\Controller\Agenda\::show_phones}

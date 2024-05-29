@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+    text-align: center;e
+}
+
+
+.header{
+    color: aqua;
+    text-align: center;
+    width: 70px;
+    height: 70px;    
+    font-size: 90px;
+    margin: 3%;
+    padding: 4%;
+}
+
+
+div{
+    color: aqua;
+    text-align: center;
+    
+}
+
+nav{
+    background-color: aqua;
+}

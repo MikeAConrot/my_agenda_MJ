@@ -1,0 +1,3 @@
+phones_new:
+    path: /phones
+    defaults: {_controller: App\Controller\Agenda\DefaultController::phones}

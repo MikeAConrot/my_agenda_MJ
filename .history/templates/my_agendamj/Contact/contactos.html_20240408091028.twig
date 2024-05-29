@@ -1,0 +1,24 @@
+
+{% extends 'base.html.twig' %}
+ 
+ 
+{% block navbar %}
+
+
+<a name="" id="b" class="btn btn-primary" href="{{path('index')}}" role="button">HOME</a>
+<a name="" id="b" class="btn btn-primary" href="{{path('phones_new')}}" role="button">ADD NEW PHONE</a>
+<a name="" id="b" class="btn btn-primary" href="{{path('show_contacts')}}" role="button">SHOW CONTACTS </a>
+
+{% endblock %}
+{% block title_name %}
+ ADD NEW CONTACT
+{% endblock %}
+{% block header %}
+    <h1 style="text-align:center">NEW CONTACT</h1>
+{% endblock %}
+ 
+{% block content  %}
+    <div class="container">
+    {{ form(form) }}
+    </div>
+{% endblock %}

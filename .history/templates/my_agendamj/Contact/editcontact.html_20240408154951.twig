@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+ 
+{% block navbar %}
+
+
+<a name="" id="b" class="btn btn-primary" href="{{path('index')}}" role="button">HOME</a>
+<a name="" id="b" class="btn btn-primary" href="{{path('show_contacts')}}" role="button">SHOW EXISTING CONTACTS</a>
+
+{% endblock %}
+
+
+{% block title_name %}
+    
+{% endblock %}
+{% block header %}
+   <h1 style="text-align:center">EDIT CONTACT</h1>
+{% endblock %}
+ 
+{% block content  %}
+<div class="container">
+
+
+    {{form_start(form)  }}
+
+    <ul class="phones"
+     data-index="{{ form.phones|length > 0 ? form.phones|last.vars.name + 2 : 1 }}"
+     data-prototype="{{ form_widget(form.phones.vars.prototype)|e('html_attr') }}">
+    {% for phone in form.phones %}
+    <li>{{ form_row(phone) }}</li>
+     {% endfor %}
+    </ul>
+  <button type="button" id="butonphone" class="a" data-collection-holder-class="phones">ADD PHONE</button>
+    {{ form_end(form)}}
+</div>
+
+
+<script>
+document
+
+.querySelectorAll('ul.phones li')
+            .forEach((tag) => {
+                addTagFormDeleteLink(tag)
+        })
+</script>
+    
+{% endblock %}

@@ -1,0 +1,14 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+index:
+    path: /
+    defaults: {_controller: App\Controller\Agenda\MyAgendaController::index}
+
+contactos:
+    path: /
+    defaults: {_cox 1ntroller: App\Controller\Agenda\DefaultController::contactos}
+

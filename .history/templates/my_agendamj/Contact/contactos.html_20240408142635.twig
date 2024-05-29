@@ -1,0 +1,64 @@
+
+{% extends 'base.html.twig' %}
+ 
+ 
+{% block navbar %}
+
+
+<a name="" id="b" class="btn btn-primary" href="{{path('index')}}" role="button">HOME</a>
+<a name="" id="b" class="btn btn-primary" href="{{path('phones_new')}}" role="button">ADD NEW PHONE</a>
+<a name="" id="b" class="btn btn-primary" href="{{path('show_contacts')}}" role="button">SHOW EXISTING CONTACTS</a>
+<a name="" id="b" class="btn btn-primary" href="{{path('show_phones')}}" role="button">SHOW EXISTING PHONES</a>
+
+{% endblock %}
+{% block title_name %}
+ ADD NEW CONTACT
+{% endblock %}
+{% block header %}
+    <h1 style="text-align:center">NEW CONTACT</h1>
+{% endblock %}
+{% block javascripts %}
+
+
+{% endblock %}   
+{% block content  %}
+    
+
+    <div class="container">
+        {{ form_start(form) }}
+        <ul class="phones"
+        data-index="{{ form.phones|length > 0 ? form.phones|last.vars.name + 1 : 0 }}"
+        data-prototype="{{ form_widget(form.phones.vars.prototype)|e('html_attr') }}">     
+         </ul>
+        <button type="button" id= class="add_item_link" data-collection-holder-class="phones">ADD PHONE</button>
+     
+     {{ form_end(form) }} 
+     </div>
+    <script>
+    document
+       .querySelectorAll('.add_item_link')
+       .forEach(btn => {
+           btn.addEventListener("click", addFormToCollection)
+  });
+ 
+function addFormToCollection(e) {
+        const collectionHolder = document.querySelector('.' + e.currentTarget.dataset.collectionHolderClass);
+ 
+        const item = document.createElement('li');
+ 
+        item.innerHTML = collectionHolder
+            .dataset
+            .prototype
+            .replace(
+            /__name__/g,
+            collectionHolder.dataset.index
+            );
+ 
+        collectionHolder.appendChild(item);
+ 
+        collectionHolder.dataset.index++;
+        addTagFormDeleteLink(item);
+    };
+    </script>
+{% endblock %}
+

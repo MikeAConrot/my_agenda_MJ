@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title_name %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+              <link rel="stylesheet" href="{{ asset('styles.css') }}">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        
+    </head>
+    <body>
+         
+        <nav class="">
+            {% block navbar %}{% endblock %}
+        </nav>
+        <d class="prueba">
+            {% block header %}{% endblock %}
+        </d>
+        {% block content %}{% endblock %}
+
+       
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

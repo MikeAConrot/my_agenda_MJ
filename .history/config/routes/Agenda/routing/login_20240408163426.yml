@@ -1,0 +1,3 @@
+app_register:
+    path: /new
+    defaults: {_controller: App\Controller\Agenda\DefaultController::new}

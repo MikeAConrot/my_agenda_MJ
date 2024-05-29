@@ -1,0 +1,33 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title_name %}
+    AGENDA HARMAN
+{% endblock %}
+
+
+{% block navbar %}
+
+ {% if app.user %}
+<a name="" id="b" class="btn btn-primary" href="{{path('contact_new')}}" role="button">NEW CONTACT</a>
+<a name="" id="b" class="btn btn-primary" href="{{path('show_contacts')}}" role="button">SHOW CONTACTS</a>
+ {% endif %}
+
+{% endblock %}
+
+ 
+{% block header %}
+    {{'title'\ |}}
+ 
+{% endblock %}
+
+
+ 
+ {% block content  %}
+    <div>
+        <h1>Agenda</h1>
+        <H2>HERE U' CAN FIND SOME OPTIONS...</H2>
+       <img id="image"src="{{ 'https://cdn.dribbble.com/users/1723450/screenshots/4925123/dribbleeee-me.gif' }}" alt="Descripción de la imagen">
+    </div>
+   
+{% endblock %}

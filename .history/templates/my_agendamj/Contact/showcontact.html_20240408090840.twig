@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title_name %}
+     AGENDA 2024
+{% endblock %}
+
+
+{% block navbar %}
+
+
+<a name="" id="b" class="btn btn-primary" href="{{path('contact_new')}}" role="button">NEW CONTACT</a>
+<a name="" id="b" class="btn btn-primary" href="{{path('phones_new')}}" role="button">PHONES</a>
+<a name="" id="b" class="btn btn-primary" href="{{path('show_contacts')}}" role="button">SHOW CONTACTS</a>
+
+{% endblock %}
+
+
+
+{% block header%}
+    <h1 style="text-align: center" class="mj">CONTACTS</h1>
+{% endblock %}
+ 
+{% block content  %}
+  
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0Jdbx8PpqyWggFhqmenPEMA7mz72Hvk mTn2vhyJXapM6DHiVrWxJE" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre Completo</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contac in contacts    %}
+                    <tr>
+                        <td>{{ contac.name }} {{ contac.lastName }}</td>
+                        <td>{{ contac.mail }}</td>
+                        <td>
+                            <a name="" id="" class="btn btn-primary" href="{{ path('edit_contacts', {'idContact': contac.id}) }}" role="button">Edit Contact</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- Add the following lines to include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5/X5y63Np/g==" crossorigin="anonymous"></script>
+</body>
+</html>
+
+{% endblock %}

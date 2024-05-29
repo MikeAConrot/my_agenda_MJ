@@ -1,0 +1,5 @@
+
+contactos:
+    path: /
+    defaults: {_controller: App\Controller\Agenda\DefaultController::contactos}
+

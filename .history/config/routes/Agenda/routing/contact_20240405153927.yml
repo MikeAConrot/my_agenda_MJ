@@ -1,0 +1,14 @@
+
+contact_new:
+    path: /new
+    defaults: {_controller: App\Controller\Agenda\DefaultController::new}
+
+
+show_contacts:
+    path: /show_contacts
+    defaults: {_controller: App\Controller\Agenda\DefaultController::show_contacts}
+
+
+edit_contacts:
+    path: /edit_contacts
+    defaults: {_controller: App\Controller\Agenda\DefaultController::show_contacts}

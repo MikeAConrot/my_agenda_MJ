@@ -1,0 +1,12 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+index:
+    path: /
+    defaults: {_controller: App\Controller\Agenda\MyAgendaController::index}
+agenda_contact:
+    resource: 'routing/contact.yml'
+    prefix: /contact

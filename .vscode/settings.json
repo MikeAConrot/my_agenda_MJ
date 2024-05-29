@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://noodl.s3.us-west-1.amazonaws.com/noodl.schema.json": "file:///c%3A/Apache24/htdocs/my_agendaMJ/translations/Agenda.es.yml"
+    }
+}

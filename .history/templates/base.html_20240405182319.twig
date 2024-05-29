@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title_name %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+                s
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Galada&display=swap');
+        </style>
+
+    </head>
+    <body>
+         
+        <nav class="">
+            {% block navbar %}
+            
+            
+            {% endblock %}
+        </nav>
+
+        <header class="header">
+             {% block header %}{% endblock %}
+        </header>
+        <div>
+        {% block content %}{% endblock %}
+        <div>
+       
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

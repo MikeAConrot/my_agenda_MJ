@@ -1,0 +1,44 @@
+
+
+
+.header{
+    color: rgb(0, 0, 0);
+    margin: 3%;
+    padding: 5%;
+    font-family: 'Abril Fatface';
+    font-size: 500%;
+    transition: 0.8S;
+
+}
+.header:hover{
+    color: blueviolet;
+    transition: 0.8S;
+    text-decoration:dotted;
+}
+
+
+div{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Abril Fatface';
+    
+}
+
+nav{
+    background-color: rgb(98, 143, 143);
+}
+.input{
+    color: rgb(0, 0, 0);
+    text-align: center;
+
+}
+.container{
+    color:rgb(0, 0, 0);
+    font-family: 'Abril Fatface';
+    border-color: black;
+    text-align: center;
+    border-style: solid;
+    background-color: ;
+}
+
+

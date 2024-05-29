@@ -1,0 +1,7 @@
+app_register:
+    path: /register
+    defaults: {_controller: App\Controller\RegistrationController::register}
+
+app_loggin:
+    path: /register
+    defaults: {_controller: App\Controller\RegistrationController::register}
